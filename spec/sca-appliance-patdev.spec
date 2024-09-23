@@ -1,7 +1,7 @@
-# 
+#
 # spec file for package sca-appliance-patdev
 #
-# Copyright (c) 2022 SUSE LLC
+# Copyright (c) 2021 SUSE LLC
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -12,21 +12,25 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 
+# Please submit bugfixes or comments via https://bugs.opensuse.org/
+#
+
+
 %define sca_common sca
 %define sca_webdir /srv/www/htdocs/%{sca_common}
 %define sca_configdir %{_sysconfdir}/%{sca_common}
 
-Name:         sca-appliance-patdev
-Version:      1.3.1
-Release:      0
-Summary:      Supportconfig Analysis Appliance Pattern Development
-License:      GPL-2.0
-URL:          https://github.com/g23guy/sca-appliance-patdev
-Group:        System/Monitoring
-Source:       %{name}-%{version}.tar.gz
-Requires:     sca-appliance-common
-Requires:     sca-patterns-base
-Buildarch:    noarch
+Name:           sca-appliance-patdev
+Version:        1.3.1
+Release:        0
+Summary:        Supportconfig Analysis Appliance Pattern Development
+License:        GPL-2.0-only
+Group:          System/Monitoring
+URL:            https://github.com/g23guy/sca-appliance-patdev
+Source:         %{name}-%{version}.tar.gz
+Requires:       sca-appliance-common
+Requires:       sca-patterns-base
+BuildArch:      noarch
 
 %description
 The SCA Appliance allows for adding custom patterns. This package
@@ -84,4 +88,3 @@ install -m 644 man/*.8.gz %{buildroot}%{_mandir}/man8
 %doc %{_docdir}/%{name}/*
 
 %changelog
-
